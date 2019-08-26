@@ -26,20 +26,10 @@ The provided scripts will deploy an end-to-end solution complete with load test 
 Please note that the scripts have been tested on [Ubuntu 18 LTS](http://releases.ubuntu.com/18.04/), so make sure to use that environment to run the scripts. You can run it using Docker, WSL or a VM:
 
 - [Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/)
-  - Build with Dockerfile `docker build --tag=streaming_one .`
-- [WSL Ubuntu 18.04 LTS](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab)
-- [Ubuntu 18.04 LTS Azure VM](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Canonical.UbuntuServer1804LTS)
-
-The following tools/languages are also needed:
-
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
-  - Install: `sudo apt install azure-cli`
-- [jq](https://stedolan.github.io/jq/download/)
-  - Install: `sudo apt install jq`
-- [python]
-  - Install: `sudo apt install python python-pip`
-- [databricks-cli](https://docs.azuredatabricks.net/user-guide/dev-tools/databricks-cli.html#install-the-cli)
-  - Install: `pip install --upgrade databricks-cli`
+  - Build the Ubuntu image with Dockerfile in this repo, ex:
+  `docker build --tag=streaming_one .`  --tag can be set to whatever u want, only used to call with docker run
+  - Run the image inteactively
+  `docker run -it streaming_one`
 
 ## Setup Solution
 
